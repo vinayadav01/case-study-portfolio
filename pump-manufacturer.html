@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pump Manufacturer Case Study</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #061212;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* BACKGROUND */
+.parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 20%, #0f2a2a, #061212);
+  z-index: -1;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 120px 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.08);
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #4fd1c5;
+}
+
+.card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* PROGRESS */
+.progress-circle {
+  width: 130px;
+  height: 130px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.progress-circle svg {
+  transform: rotate(-90deg);
+}
+
+.progress-circle circle {
+  fill: none;
+  stroke-width: 10;
+}
+
+.bg {
+  stroke: rgba(255,255,255,0.1);
+}
+
+.progress {
+  stroke: #4fd1c5;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: 2s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  margin-top: 100px;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: 1s;
+}
+
+.cta.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+button {
+  background: linear-gradient(135deg, #4fd1c5, #00f2fe);
+  padding: 14px 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* FLOAT BUTTONS */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #25D366;
+  padding: 14px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="nav-container">
+    <b>AIM Tech Marketing</b>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="healthcare.html">Healthcare</a>
+      <a href="lawyer.html">Lawyer</a>
+      <a href="packers-movers.html">Packers & Movers</a>
+      <a href="pestcontrol.html">Pest Control</a>
+      <a href="badges.html">Military Patches</a>
+      <a href="wool-e-commerce.html">Yarn Store</a>
+      <a href="skincare.html">Skincare</a>
+      <a href="pump-manufacturer.html">Pump Manufacturer</a>
+    </div>
+  </div>
+</div>
+
+<div class="parallax-bg" id="bg"></div>
+
+<div class="container">
+
+<h1>⚙️ Pump Manufacturer Case Study</h1>
+<p class="subtitle">Reducing Cost Per Lead While Increasing Conversions</p>
+
+<h2>📊 Results Overview</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>Impressions</h3>
+    <div class="progress-circle" data-percent="50">
+      <svg width="130" height="130">
+        <circle class="bg" cx="65" cy="65" r="50"/>
+        <circle class="progress" cx="65" cy="65" r="50"/>
+      </svg>
+      <div class="progress-text" data-target="50">0%</div>
+    </div>
+    <p>16,107</p>
+  </div>
+
+  <div class="card">
+    <h3>Ad Spend</h3>
+    <div class="progress-circle" data-percent="10">
+      <svg width="130" height="130">
+        <circle class="bg" cx="65" cy="65" r="50"/>
+        <circle class="progress" cx="65" cy="65" r="50"/>
+      </svg>
+      <div class="progress-text" data-target="10">0%</div>
+    </div>
+    <p>$4,876</p>
+  </div>
+
+  <div class="card">
+    <h3>Conversions</h3>
+    <div class="progress-circle" data-percent="22">
+      <svg width="130" height="130">
+        <circle class="bg" cx="65" cy="65" r="50"/>
+        <circle class="progress" cx="65" cy="65" r="50"/>
+      </svg>
+      <div class="progress-text" data-target="22">0%</div>
+    </div>
+    <p>83</p>
+  </div>
+
+  <div class="card">
+    <h3>Cost / Conversion</h3>
+    <div class="progress-circle" data-percent="58">
+      <svg width="130" height="130">
+        <circle class="bg" cx="65" cy="65" r="50"/>
+        <circle class="progress" cx="65" cy="65" r="50"/>
+      </svg>
+      <div class="progress-text" data-target="58">0%</div>
+    </div>
+    <p>$58.76</p>
+  </div>
+
+</div>
+
+<!-- OBJECTIVES -->
+<h2 style="margin-top:80px;">🎯 Objectives</h2>
+<div class="grid">
+  <div class="card">Reduce cost per lead</div>
+  <div class="card">Increase conversion volume</div>
+  <div class="card">Improve targeting accuracy</div>
+  <div class="card">Eliminate wasted ad spend</div>
+</div>
+
+<!-- STRATEGY -->
+<h2 style="margin-top:80px;">🧠 Strategy</h2>
+<div class="grid">
+  <div class="card">Added high-intent keywords</div>
+  <div class="card">Removed irrelevant search terms</div>
+  <div class="card">Optimized location targeting</div>
+  <div class="card">Added audience segments</div>
+  <div class="card">Continuous bid & performance optimization</div>
+</div>
+
+<!-- CHALLENGES -->
+<h2 style="margin-top:80px;">⚠️ Challenges</h2>
+<div class="grid">
+  <div class="card">High cost per conversion</div>
+  <div class="card">Irrelevant traffic</div>
+  <div class="card">Incorrect location targeting</div>
+  <div class="card">Limited keyword coverage</div>
+</div>
+
+<!-- FINAL OUTCOME -->
+<h2 style="margin-top:80px;">🏆 Final Outcome</h2>
+<div class="grid">
+  <div class="card">83 conversions generated</div>
+  <div class="card">$1,600+ cost reduced</div>
+  <div class="card">CPA reduced by $24</div>
+  <div class="card">Improved lead quality & efficiency</div>
+</div>
+
+<div class="cta">
+<h2>💬 Want Similar Results?</h2>
+<button onclick="window.open('https://calendly.com/vinayyadav01992')">
+Book Strategy Call
+</button>
+</div>
+
+</div>
+
+<a href="https://wa.me/9589188668" class="whatsapp">💬</a>
+
+<div class="footer">
+<p>© 2026 Vinay Yadav | Performance Marketing Consultant</p>
+</div>
+
+<script>
+window.addEventListener("scroll", () => {
+  const bg = document.getElementById("bg");
+  bg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+});
+
+const elements = document.querySelectorAll('.card, .cta');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.3 });
+
+elements.forEach(el => observer.observe(el));
+
+document.querySelectorAll('.progress-circle').forEach(el => {
+  const percent = parseFloat(el.dataset.percent);
+  const text = el.querySelector('.progress-text');
+  const target = parseFloat(text.dataset.target);
+
+  const circle = el.querySelector('.progress');
+  const circumference = 314;
+  const offset = circumference - (percent / 100) * circumference;
+
+  setTimeout(() => {
+    circle.style.strokeDashoffset = offset;
+  }, 500);
+
+  let count = 0;
+  const step = target / 60;
+
+  const counter = setInterval(() => {
+    count += step;
+    if (count >= target) {
+      count = target;
+      clearInterval(counter);
+    }
+    text.innerText = count.toFixed(0) + "%";
+  }, 20);
+});
+</script>
+
+</body>
+</html>
