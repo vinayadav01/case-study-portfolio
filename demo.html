@@ -96,23 +96,6 @@ body{background:#eef2f7;color:#333}
   transform:translateY(-10px) scale(1.02);
 }
 
-/* SHINE EFFECT */
-.card::after{
-  content:"";
-  position:absolute;
-  top:-100%;
-  left:-100%;
-  width:200%;
-  height:200%;
-  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.5),transparent);
-  transform:rotate(25deg);
-  transition:.6s;
-}
-.card:hover::after{
-  top:100%;
-  left:100%;
-}
-
 /* PROCESS */
 .process{
   display:grid;
@@ -124,11 +107,9 @@ body{background:#eef2f7;color:#333}
   padding:20px;
   border-radius:10px;
   text-align:center;
-  transition:.3s;
 }
-.step:hover{transform:translateY(-5px);}
 
-/* CTA BUTTON */
+/* STICKY CTA */
 .sticky-cta{
   position:fixed;
   bottom:20px;
@@ -141,10 +122,6 @@ body{background:#eef2f7;color:#333}
   box-shadow:0 10px 25px rgba(0,0,0,0.2);
   cursor:pointer;
   border:none;
-  animation:pulse 2s infinite;
-}
-.sticky-cta:hover{
-  transform:translateY(-4px);
 }
 
 /* WHATSAPP */
@@ -157,18 +134,25 @@ body{background:#eef2f7;color:#333}
   padding:14px;
   border-radius:50%;
   text-decoration:none;
-  animation:pulse 2s infinite;
 }
 
 /* POPUP */
 .popup{
-  display:none;
+  opacity:0;
+  visibility:hidden;
   position:fixed;
   width:100%;
   height:100%;
   background:rgba(0,0,0,0.6);
+  display:flex;
   justify-content:center;
   align-items:center;
+  transition:.3s;
+}
+
+.popup.active{
+  opacity:1;
+  visibility:visible;
 }
 
 .popup-box{
@@ -178,12 +162,12 @@ body{background:#eef2f7;color:#333}
   width:320px;
   text-align:center;
   position:relative;
-  animation:popupIn .4s ease;
+  transform:scale(.8);
+  transition:.3s;
 }
 
-@keyframes popupIn{
-  from{transform:scale(.7);opacity:0;}
-  to{transform:scale(1);opacity:1;}
+.popup.active .popup-box{
+  transform:scale(1);
 }
 
 .popup-box input{
@@ -206,17 +190,6 @@ body{background:#eef2f7;color:#333}
   text-align:center;
   padding:20px;
 }
-
-/* SCROLL FADE */
-.fade{
-  opacity:0;
-  transform:translateY(30px);
-  transition:.8s;
-}
-.fade.show{
-  opacity:1;
-  transform:translateY(0);
-}
 </style>
 </head>
 
@@ -224,11 +197,6 @@ body{background:#eef2f7;color:#333}
 
 <div class="navbar">
   <div style="color:#fff;font-weight:600;">AIM Tech Marketing</div>
-  <div>
-    <a href="#case">Case Studies</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-  </div>
 </div>
 
 <div class="hero">
@@ -237,40 +205,16 @@ body{background:#eef2f7;color:#333}
   <button onclick="openPopup()">🚀 Get Free Strategy</button>
 </div>
 
-<div class="stats fade">
+<div class="stats">
   <div class="stat"><h2>5000+</h2><p>Leads Generated</p></div>
   <div class="stat"><h2>9+</h2><p>Industries</p></div>
   <div class="stat"><h2>6x</h2><p>ROAS</p></div>
 </div>
 
-<div id="case" class="section fade">
-<h2>Case Studies</h2>
-<div class="grid">
-<a href="healthcare.html" class="card">🏥 Healthcare</a>
-<a href="lawyer.html" class="card">⚖️ Lawyer</a>
-<a href="packers-movers.html" class="card">🚚 Packers</a>
-<a href="pestcontrol.html" class="card">🐜 Pest Control</a>
-<a href="badges.html" class="card">🎖️ Badges</a>
-<a href="wool-e-commerce.html" class="card">🧶 Yarn</a>
-<a href="skincare.html" class="card">🧴 Skincare</a>
-<a href="pump-manufacturer.html" class="card">⚙️ Pump</a>
-<a href="construction.html" class="card">🏗️ Construction</a>
-</div>
-</div>
-
-<div id="process" class="section fade">
-<h2>My Process</h2>
-<div class="process">
-<div class="step">🎯 Research</div>
-<div class="step">⚙️ Setup</div>
-<div class="step">📈 Optimize</div>
-<div class="step">🚀 Scale</div>
-</div>
-</div>
-
-<button class="sticky-cta" onclick="openPopup("https://wa.me/9589188668")">🚀 Get Free Audit</button>
+<button class="sticky-cta" onclick="openPopup()">🚀 Get Free Audit</button>
 <a href="https://wa.me/9589188668" class="whatsapp">💬</a>
 
+<!-- POPUP -->
 <div id="leadPopup" class="popup">
 <div class="popup-box">
 <span onclick="closePopup()">×</span>
@@ -282,32 +226,25 @@ body{background:#eef2f7;color:#333}
 </div>
 </div>
 
-<div style="max-width:1100px;margin:80px auto;padding:20px;">
-<h2 style="text-align:center;">Book a Free Consultation</h2>
-<iframe src="https://calendly.com/vinayyadav01992" width="100%" height="600"></iframe>
-</div>
-
-<div class="footer">
-<p>© 2026 Vinay Yadav</p>
-</div>
+<div class="footer">© 2026 Vinay Yadav</div>
 
 <script>
-const popup=document.getElementById("leadPopup");
+function openPopup(){
+  document.getElementById("leadPopup").classList.add("active");
+}
 
-function openPopup(){popup.style.display="flex";}
-function closePopup(){popup.style.display="none";}
-function openCalendly(){window.open("https://calendly.com/vinayyadav01992");}
+function closePopup(){
+  document.getElementById("leadPopup").classList.remove("active");
+}
 
-/* SCROLL ANIMATION */
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(e=>{
-if(e.isIntersecting){e.target.classList.add('show');}
+function openCalendly(){
+  window.open("https://calendly.com/vinayyadav01992","_blank");
+}
+
+/* LOAD SAFE */
+window.addEventListener("load",function(){
+  setTimeout(openPopup,8000);
 });
-});
-document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
-
-/* AUTO POPUP */
-setTimeout(openPopup,8000);
 </script>
 
 </body>
