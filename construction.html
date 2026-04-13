@@ -3,173 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pre-Cast & Concrete Services Case Study</title>
+<title>Concrete Services Case Study</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#333}
 
-body {
-  background: #f5f7fa;
-  color: #333;
-  line-height: 1.6;
+/* NAVBAR */
+.navbar{
+  background:#111;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
+.navbar a{
+  color:#fff;
+  margin:0 10px;
+  text-decoration:none;
+  font-size:14px;
+}
+.navbar a:hover{color:#00aaff}
 
 /* HERO */
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-              url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 100px 20px;
-  text-align: center;
+.hero{
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+  background-size:cover;
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
+}
+.hero h1{font-size:38px}
+
+/* RESULTS TOP */
+.results{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:30px;
+  margin-top:-60px;
+  padding:20px;
 }
 
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
+/* CIRCLE KPI */
+.circle{
+  width:150px;
+  height:150px;
+  background:#fff;
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
-
-.hero p {
-  font-size: 18px;
-  opacity: 0.9;
+.circle h2{
+  color:#0077ff;
+  font-size:26px;
+}
+.circle p{
+  font-size:13px;
+  text-align:center;
 }
 
 /* SECTION */
-.section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 20px;
+.section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
 }
-
-.section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #222;
-}
+.section h2{margin-bottom:20px}
 
 /* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
 /* CARD */
-.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-/* KPI */
-.kpi {
-  text-align: center;
-}
-
-.kpi h3 {
-  font-size: 32px;
-  color: #0077ff;
-}
-
-.kpi p {
-  margin-top: 5px;
-  font-size: 14px;
-}
-
-/* LIST */
-ul {
-  padding-left: 18px;
-}
-
-ul li {
-  margin-bottom: 10px;
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
 /* CTA */
-.cta {
-  background: #0077ff;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
-  border-radius: 12px;
+.cta{
+  background:#0077ff;
+  color:#fff;
+  text-align:center;
+  padding:50px 20px;
+  border-radius:10px;
 }
-
-.cta h2 {
-  margin-bottom: 15px;
-}
-
-.cta button {
-  padding: 12px 28px;
-  border: none;
-  background: white;
-  color: #0077ff;
-  font-weight: 600;
-  border-radius: 25px;
-  cursor: pointer;
-}
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #777;
+.cta button{
+  margin-top:15px;
+  padding:12px 25px;
+  border:none;
+  background:#fff;
+  color:#0077ff;
+  border-radius:25px;
+  cursor:pointer;
 }
 
 /* ANIMATION */
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.8s;
-}
-
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+.fade{opacity:0;transform:translateY(30px);transition:0.7s;}
+.fade.show{opacity:1;transform:translateY(0);}
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<div class="navbar">
+  <div style="color:#fff;font-weight:600;">Case Studies</div>
+  <div>
+    <a href="#">Pump Manufacturer</a>
+    <a href="#">Concrete Services</a>
+    <a href="#">Legal Services</a>
+    <a href="#">SaaS Leads</a>
+  </div>
+</div>
+
 <!-- HERO -->
 <div class="hero">
-  <h1>Pre-Cast & Concrete Remedial Case Study</h1>
-  <p>Scaling High-Quality Leads in Melbourne Construction Industry</p>
+  <h1>Pre-Cast & Concrete Remedial Services</h1>
+  <p>Lead Generation Case Study – Melbourne</p>
+</div>
+
+<!-- RESULTS (TOP) -->
+<div class="results">
+
+  <div class="circle">
+    <h2 class="counter" data-target="110">0</h2>
+    <p>Monthly Leads</p>
+  </div>
+
+  <div class="circle">
+    <h2 class="counter" data-target="72">0</h2>
+    <p>CPL (AUD)</p>
+  </div>
+
+  <div class="circle">
+    <h2 class="counter" data-target="7">0</h2>
+    <p>Conversion Rate %</p>
+  </div>
+
+  <div class="circle">
+    <h2 class="counter" data-target="8000">0</h2>
+    <p>Ad Spend (AUD)</p>
+  </div>
+
 </div>
 
 <!-- OVERVIEW -->
 <div class="section fade">
-  <h2>📌 Project Overview</h2>
+  <h2>📌 Overview</h2>
   <p>
-    A Melbourne-based Pre-Cast & Concrete Remedial specialist approached us to generate consistent,
-    high-quality leads from builders, contractors, and property developers. The goal was to build a
-    scalable lead generation system using Google Ads within a fixed monthly budget.
+    A Melbourne-based concrete remedial specialist wanted consistent, high-quality
+    B2B leads. We built a high-intent Google Ads funnel targeting builders,
+    contractors, and developers.
   </p>
 </div>
 
-<!-- OBJECTIVES -->
+<!-- STRATEGY -->
 <div class="section fade">
-  <h2>🎯 Objectives</h2>
+  <h2>🚀 Strategy</h2>
   <div class="grid">
-    <div class="card">Generate qualified construction leads</div>
-    <div class="card">Reduce cost per lead</div>
-    <div class="card">Target high-intent commercial clients</div>
-    <div class="card">Improve conversion rate</div>
+    <div class="card">High-intent keyword targeting</div>
+    <div class="card">Landing page optimization</div>
+    <div class="card">Call & form tracking via GTM</div>
+    <div class="card">Remarketing campaigns</div>
   </div>
 </div>
 
@@ -177,95 +185,60 @@ ul li {
 <div class="section fade">
   <h2>⚠️ Challenges</h2>
   <ul>
-    <li>Highly competitive construction niche in Melbourne</li>
-    <li>Low search volume but high CPC keywords</li>
-    <li>Unqualified inquiries from residential users</li>
-    <li>No prior structured ad funnel</li>
+    <li>High CPC in construction niche</li>
+    <li>Low search volume</li>
+    <li>Irrelevant residential leads</li>
   </ul>
 </div>
 
-<!-- STRATEGY -->
+<!-- INSIGHTS -->
 <div class="section fade">
-  <h2>🚀 Strategy Implemented</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Search Campaigns</h3>
-      <p>Focused on high-intent keywords like “concrete repair contractors Melbourne”.</p>
-    </div>
-    <div class="card">
-      <h3>Landing Page Optimization</h3>
-      <p>Created service-specific pages with strong CTAs and trust signals.</p>
-    </div>
-    <div class="card">
-      <h3>Audience Filtering</h3>
-      <p>Excluded residential traffic and targeted B2B segments.</p>
-    </div>
-    <div class="card">
-      <h3>Conversion Tracking</h3>
-      <p>Implemented call + form tracking via GTM & GA4.</p>
-    </div>
-  </div>
-</div>
-
-<!-- RESULTS -->
-<div class="section fade">
-  <h2>📊 Results (Monthly Estimate)</h2>
-  <div class="grid">
-    <div class="card kpi">
-      <h3>AUD 8,000</h3>
-      <p>Ad Spend</p>
-    </div>
-    <div class="card kpi">
-      <h3>95 - 120</h3>
-      <p>Leads Generated</p>
-    </div>
-    <div class="card kpi">
-      <h3>AUD 65 - 85</h3>
-      <p>Cost Per Lead</p>
-    </div>
-    <div class="card kpi">
-      <h3>6% - 9%</h3>
-      <p>Conversion Rate</p>
-    </div>
-  </div>
-</div>
-
-<!-- KEY INSIGHTS -->
-<div class="section fade">
-  <h2>💡 Key Insights</h2>
+  <h2>💡 Insights</h2>
   <ul>
-    <li>Long-tail keywords delivered highest ROI</li>
-    <li>Call extensions increased conversions by ~30%</li>
-    <li>Remarketing improved lead quality significantly</li>
-    <li>Landing page speed boosted conversion rate</li>
+    <li>Long-tail keywords delivered best CPL</li>
+    <li>Call extensions boosted conversions</li>
+    <li>Remarketing improved lead quality</li>
   </ul>
 </div>
 
 <!-- CTA -->
 <div class="section">
   <div class="cta">
-    <h2>Want Similar Results for Your Business?</h2>
-    <p>Let’s build a high-converting lead generation system for your niche.</p>
+    <h2>Want Similar Results?</h2>
+    <p>Let’s scale your lead generation.</p>
     <button>Get Free Strategy</button>
   </div>
 </div>
 
-<!-- FOOTER -->
-<div class="footer">
-  © 2026 Case Study | Digital Marketing Portfolio
-</div>
-
 <script>
-// Fade animation
-const faders = document.querySelectorAll('.fade');
-
-window.addEventListener('scroll', () => {
-  faders.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
+// FADE
+const faders=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+  faders.forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-100){
       el.classList.add('show');
     }
   });
+});
+
+// COUNTER
+const counters=document.querySelectorAll('.counter');
+const speed=200;
+
+counters.forEach(counter=>{
+  const update=()=>{
+    const target=+counter.getAttribute('data-target');
+    const count=+counter.innerText;
+    const inc=target/speed;
+
+    if(count<target){
+      counter.innerText=Math.ceil(count+inc);
+      setTimeout(update,10);
+    } else {
+      counter.innerText=target;
+    }
+  };
+  update();
 });
 </script>
 
