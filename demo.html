@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIM Tech Marketing | Generate Leads</title>
+<title>AIM Tech Marketing | Performance Marketing Expert</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -13,276 +13,223 @@ body{background:#eef2f7;color:#333}
 
 /* NAVBAR */
 .navbar{
-  position:sticky;
-  top:0;
-  background:#0f172a;
-  padding:15px 30px;
-  display:flex;
-  justify-content:space-between;
-  z-index:999;
+position:sticky;top:0;background:#0f172a;
+padding:15px 30px;display:flex;justify-content:space-between;z-index:999;
 }
 .navbar a{color:#fff;margin:0 10px;text-decoration:none;}
-.navbar a:hover{color:#38bdf8}
 
 /* HERO */
 .hero{
-  background:linear-gradient(135deg,#0ea5e9,#38bdf8);
-  text-align:center;
-  padding:120px 20px;
+background:linear-gradient(135deg,#0ea5e9,#38bdf8);
+text-align:center;padding:120px 20px;
 }
-.hero h1{font-size:42px;margin-bottom:10px;}
-.hero p{margin-bottom:20px;}
+.hero h1{font-size:42px;}
+.hero p{margin:10px 0;}
 .hero button{
-  padding:14px 30px;
-  background:#000;
-  color:#fff;
-  border:none;
-  border-radius:30px;
-  cursor:pointer;
+padding:14px 30px;background:#000;color:#fff;border:none;border-radius:30px;
+cursor:pointer;
+}
+
+/* URGENCY BAR */
+.urgency-bar{
+background:#b91c1c;color:#fff;text-align:center;padding:10px;font-weight:600;
 }
 
 /* STATS */
 .stats{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:40px;
-  flex-wrap:wrap;
+display:flex;justify-content:center;gap:30px;padding:40px;flex-wrap:wrap;
 }
 .stat{
-  background:#fff;
-  padding:20px 30px;
-  border-radius:12px;
-  text-align:center;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
+padding:25px;border-radius:15px;text-align:center;
 }
 .stat h2{color:#0ea5e9}
 
 /* SECTION */
-.section{
-  max-width:1200px;
-  margin:auto;
-  padding:70px 20px;
-}
+.section{max-width:1200px;margin:auto;padding:70px 20px;}
 
 /* GRID */
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
 
 /* CARD */
 .card{
-  background:#fff;
-  padding:25px;
-  border-radius:14px;
-  text-decoration:none;
-  color:#333;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:.3s;
+background:#fff;padding:25px;border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:.3s;text-decoration:none;color:#333;
 }
-.card:hover{transform:translateY(-8px);}
+.card:hover{transform:translateY(-10px);}
 
-/* PROCESS */
-.process{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+/* DASHBOARD */
+.dashboard{
+background:#fff;padding:30px;border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
-.step{
-  background:#fff;
-  padding:20px;
-  border-radius:10px;
-  text-align:center;
+.dashboard h3{margin-bottom:20px;}
+.bar{
+height:10px;background:#e5e7eb;border-radius:5px;margin:10px 0;
+}
+.bar-fill{
+height:10px;background:#0ea5e9;border-radius:5px;width:70%;
+}
+
+/* BEFORE AFTER */
+.compare{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+.compare-box{
+background:#fff;padding:20px;border-radius:12px;text-align:center;
 }
 
 /* TESTIMONIAL */
 .testimonial{
-  background:#fff;
-  padding:30px;
-  border-radius:12px;
-  text-align:center;
-  max-width:700px;
-  margin:auto;
+background:#fff;padding:30px;border-radius:12px;text-align:center;
+max-width:700px;margin:auto;
 }
 
 /* CTA */
 .cta{
-  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
-  text-align:center;
-  padding:80px 20px;
+background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+text-align:center;padding:80px 20px;
 }
 .cta button{
-  margin-top:20px;
-  padding:14px 30px;
-  background:#000;
-  color:#fff;
-  border:none;
-  border-radius:30px;
+margin-top:20px;padding:14px 30px;background:#000;color:#fff;
+border:none;border-radius:30px;
 }
 
 /* POPUP */
 .popup{
-  display:none;
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
-  justify-content:center;
-  align-items:center;
+display:none;position:fixed;width:100%;height:100%;
+background:rgba(0,0,0,0.6);justify-content:center;align-items:center;
 }
 .popup-box{
-  background:#fff;
-  padding:25px;
-  border-radius:10px;
-  width:320px;
-  text-align:center;
+background:#fff;padding:25px;border-radius:10px;width:320px;text-align:center;
 }
-.popup-box input{
-  width:100%;
-  margin:10px 0;
-  padding:10px;
-}
+.popup-box input{width:100%;margin:10px 0;padding:10px;}
 
 /* STICKY */
 .sticky-btn{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#0ea5e9;
-  color:#fff;
-  padding:12px 20px;
-  border-radius:30px;
-  cursor:pointer;
+position:fixed;bottom:20px;right:20px;
+background:#0ea5e9;color:#fff;padding:12px 20px;border-radius:30px;cursor:pointer;
 }
 .whatsapp{
-  position:fixed;
-  bottom:80px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:12px;
-  border-radius:50%;
-  text-decoration:none;
+position:fixed;bottom:80px;right:20px;
+background:#25D366;color:#fff;padding:12px;border-radius:50%;
 }
 
 /* FOOTER */
 .footer{
-  background:#0f172a;
-  color:#fff;
-  text-align:center;
-  padding:20px;
+background:#0f172a;color:#fff;text-align:center;padding:20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<div class="urgency-bar">⚠️ Only 3 Free Strategy Calls Left This Week</div>
+
 <div class="navbar">
-  <div style="color:#fff;font-weight:600;">AIM Tech Marketing</div>
-  <div>
-    <a href="#case">Case Studies</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-  </div>
+<div style="color:#fff;font-weight:600;">AIM Tech Marketing</div>
+<div>
+<a href="#case">Case Studies</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+</div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
-  <h1>I Generate High-Quality Leads Using Google Ads</h1>
-  <p>Get consistent leads for your business in 30 days</p>
-  <button onclick="openPopup()">🚀 Get Free Strategy</button>
+<h1>I Generate High-Quality Leads Using Google Ads</h1>
+<p>Consistent leads in 30 days or less</p>
+<button onclick="openPopup()">🚀 Get Free Audit</button>
 </div>
 
-<!-- STATS -->
 <div class="stats">
-  <div class="stat"><h2>5000+</h2><p>Leads Generated</p></div>
-  <div class="stat"><h2>9+</h2><p>Industries</p></div>
-  <div class="stat"><h2>6x</h2><p>ROAS</p></div>
+<div class="stat"><h2 class="counter" data-target="5000">0</h2><p>Leads</p></div>
+<div class="stat"><h2 class="counter" data-target="9">0</h2><p>Industries</p></div>
+<div class="stat"><h2 class="counter" data-target="6">0</h2><p>ROAS</p></div>
 </div>
 
-<!-- CASE STUDIES -->
+<div class="section">
+<h2>📊 Google Ads Performance</h2>
+<div class="dashboard">
+<h3>Campaign Snapshot</h3>
+<p>Clicks</p><div class="bar"><div class="bar-fill"></div></div>
+<p>Conversions</p><div class="bar"><div class="bar-fill" style="width:60%"></div></div>
+<p>CTR</p><div class="bar"><div class="bar-fill" style="width:75%"></div></div>
+</div>
+</div>
+
+<div class="section">
+<h2>📈 Before vs After</h2>
+<div class="compare">
+<div class="compare-box"><h3>Before</h3><p>Low Leads<br>High CPL</p></div>
+<div class="compare-box"><h3>After</h3><p>110 Leads<br>$72 CPL</p></div>
+</div>
+</div>
+
 <div id="case" class="section">
 <h2>Case Studies</h2>
 <div class="grid">
+<a href="construction.html" class="card">🏗️ Construction</a>
+<a href="pump-manufacturer.html" class="card">⚙️ Pump</a>
 <a href="healthcare.html" class="card">🏥 Healthcare</a>
 <a href="lawyer.html" class="card">⚖️ Lawyer</a>
-<a href="packers-movers.html" class="card">🚚 Packers</a>
-<a href="pestcontrol.html" class="card">🐜 Pest Control</a>
-<a href="badges.html" class="card">🎖️ Badges</a>
-<a href="wool-e-commerce.html" class="card">🧶 Yarn</a>
-<a href="skincare.html" class="card">🧴 Skincare</a>
-<a href="pump-manufacturer.html" class="card">⚙️ Pump</a>
-<a href="construction.html" class="card">🏗️ Construction</a>
 </div>
 </div>
 
-<!-- PROCESS -->
-<div id="process" class="section">
-<h2>My Process</h2>
-<div class="process">
-<div class="step">🎯 Research</div>
-<div class="step">⚙️ Setup</div>
-<div class="step">📈 Optimize</div>
-<div class="step">🚀 Scale</div>
+<div class="section">
+<div class="testimonial">
+<p>"We started getting consistent leads within 30 days."</p>
+<b>- Client</b>
 </div>
 </div>
 
+<div id="contact" class="cta">
+<h2>Book Your Free Strategy Call</h2>
+<button onclick="openPopup()">Book Now</button>
+</div>
 
-<!-- CTA -->
-<button class="sticky-cta" onclick="openPopup()">🚀 Get Free Leads Plan</button>
+<div id="leadPopup" class="popup">
+<div class="popup-box">
+<span onclick="closePopup()">✖</span>
+<h3>Get Free Audit</h3>
+<input placeholder="Name">
+<input placeholder="Email">
+<input placeholder="Phone">
+<button onclick="openCalendly()">Book Call</button>
+</div>
+</div>
+
+<div class="sticky-btn" onclick="openPopup()">Get Plan</div>
 <a href="https://wa.me/9589188668" class="whatsapp">💬</a>
 
-<!-- POPUP -->
-<div id="leadPopup" class="popup">
-  <div class="popup-box">
-    <span onclick="closePopup()">×</span>
-    <h2>Get Free Strategy Call</h2>
-    <input placeholder="Your Name">
-    <input placeholder="Your Email">
-    <input placeholder="Your Phone">
-    <button onclick="openCalendly()">Book Call</button>
-  </div>
-</div>
-
-<!-- CALENDLY -->
-<div style="max-width:1100px;margin:80px auto;padding:20px;">
-  <h2 style="text-align:center;">Book a Free Consultation</h2>
-  <iframe src="https://calendly.com/vinayyadav01992" width="100%" height="600"></iframe>
-</div>
-
-<div class="footer">
-  <p>© 2026 Vinay Yadav | Performance Marketing Consultant</p>
-</div>
+<div class="footer">© 2026 Vinay Yadav</div>
 
 <script>
-// mouse glow
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("mousemove", e => {
-    const rect = card.getBoundingClientRect();
-    card.style.setProperty("--x", (e.clientX - rect.left) + "px");
-    card.style.setProperty("--y", (e.clientY - rect.top) + "px");
-  });
+function openPopup(){document.getElementById("leadPopup").style.display="flex";}
+function closePopup(){document.getElementById("leadPopup").style.display="none";}
+function openCalendly(){window.open("https://calendly.com/vinayyadav01992");}
+
+// COUNTER
+document.querySelectorAll(".counter").forEach(el=>{
+let t=+el.dataset.target,c=0,s=t/60;
+function u(){c+=s;if(c<t){el.innerText=Math.floor(c);requestAnimationFrame(u);}else{el.innerText=t;}}
+u();
 });
 
-// scroll animation
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('show');
-    }
-  });
-},{threshold:0.3});
+// EXIT INTENT
+document.addEventListener("mouseout",function(e){
+if(e.clientY<5){openPopup();}
+});
 
-document.querySelectorAll('.card').forEach(el=>observer.observe(el));
-
-// popup
-function openPopup(){leadPopup.style.display="flex";}
-function closePopup(){leadPopup.style.display="none";}
-function openCalendly(){window.open("https://calendly.com/vinayyadav01992","_blank");}
-
-setTimeout(openPopup,10000);
+// AUTO POPUP
+setTimeout(openPopup,5000);
 </script>
 
 </body>
