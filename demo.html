@@ -1,10 +1,134 @@
-<!-- REPLACE ONLY THESE PARTS IN YOUR CODE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIM Tech Marketing | Generate Leads</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#eef2f7;color:#333}
 
-/* ADD THIS BELOW YOUR EXISTING CSS */
+/* NAVBAR */
+.navbar{
+  position:sticky; top:0;
+  background:#0f172a;
+  padding:15px 30px;
+  display:flex; justify-content:space-between;
+  z-index:999;
+}
+.navbar a{color:#fff;margin:0 10px;text-decoration:none;}
+.navbar a:hover{color:#38bdf8}
 
-/* PREMIUM STICKY CTA */
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#0ea5e9,#38bdf8);
+  text-align:center;
+  padding:120px 20px;
+}
+.hero h1{font-size:42px;margin-bottom:10px;}
+.hero p{margin-bottom:20px;}
+
+.hero button{
+  padding:14px 30px;
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  animation:pulse 2s infinite;
+}
+
+/* PULSE */
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.05);}
+  100%{transform:scale(1);}
+}
+
+/* STATS */
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:40px;
+  flex-wrap:wrap;
+}
+.stat{
+  background:#fff;
+  padding:20px 30px;
+  border-radius:12px;
+  text-align:center;
+  transition:.3s;
+}
+.stat:hover{transform:translateY(-5px);}
+.stat h2{color:#0ea5e9}
+
+/* SECTION */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  padding:25px;
+  border-radius:14px;
+  text-decoration:none;
+  color:#333;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:.4s;
+  position:relative;
+  overflow:hidden;
+}
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+}
+
+/* SHINE EFFECT */
+.card::after{
+  content:"";
+  position:absolute;
+  top:-100%;
+  left:-100%;
+  width:200%;
+  height:200%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.5),transparent);
+  transform:rotate(25deg);
+  transition:.6s;
+}
+.card:hover::after{
+  top:100%;
+  left:100%;
+}
+
+/* PROCESS */
+.process{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.step{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  transition:.3s;
+}
+.step:hover{transform:translateY(-5px);}
+
+/* CTA BUTTON */
 .sticky-cta{
   position:fixed;
   bottom:20px;
@@ -17,26 +141,174 @@
   box-shadow:0 10px 25px rgba(0,0,0,0.2);
   cursor:pointer;
   border:none;
-  transition:.3s;
-  z-index:999;
+  animation:pulse 2s infinite;
 }
-
 .sticky-cta:hover{
   transform:translateY(-4px);
-  box-shadow:0 15px 30px rgba(0,0,0,0.25);
 }
 
-/* POPUP CLOSE BUTTON FIX */
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:80px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:14px;
+  border-radius:50%;
+  text-decoration:none;
+  animation:pulse 2s infinite;
+}
+
+/* POPUP */
+.popup{
+  display:none;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+}
+
+.popup-box{
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+  width:320px;
+  text-align:center;
+  position:relative;
+  animation:popupIn .4s ease;
+}
+
+@keyframes popupIn{
+  from{transform:scale(.7);opacity:0;}
+  to{transform:scale(1);opacity:1;}
+}
+
+.popup-box input{
+  width:100%;
+  margin:10px 0;
+  padding:10px;
+}
+
 .popup-box span{
   position:absolute;
   top:10px;
   right:15px;
   cursor:pointer;
-  font-size:18px;
 }
 
-.popup-box{
-  position:relative;
+/* FOOTER */
+.footer{
+  background:#0f172a;
+  color:#fff;
+  text-align:center;
+  padding:20px;
 }
 
+/* SCROLL FADE */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:.8s;
+}
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
 </style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div style="color:#fff;font-weight:600;">AIM Tech Marketing</div>
+  <div>
+    <a href="#case">Case Studies</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>I Generate High-Quality Leads Using Google Ads</h1>
+  <p>Get consistent leads for your business in 30 days</p>
+  <button onclick="openPopup()">🚀 Get Free Strategy</button>
+</div>
+
+<div class="stats fade">
+  <div class="stat"><h2>5000+</h2><p>Leads Generated</p></div>
+  <div class="stat"><h2>9+</h2><p>Industries</p></div>
+  <div class="stat"><h2>6x</h2><p>ROAS</p></div>
+</div>
+
+<div id="case" class="section fade">
+<h2>Case Studies</h2>
+<div class="grid">
+<a href="healthcare.html" class="card">🏥 Healthcare</a>
+<a href="lawyer.html" class="card">⚖️ Lawyer</a>
+<a href="packers-movers.html" class="card">🚚 Packers</a>
+<a href="pestcontrol.html" class="card">🐜 Pest Control</a>
+<a href="badges.html" class="card">🎖️ Badges</a>
+<a href="wool-e-commerce.html" class="card">🧶 Yarn</a>
+<a href="skincare.html" class="card">🧴 Skincare</a>
+<a href="pump-manufacturer.html" class="card">⚙️ Pump</a>
+<a href="construction.html" class="card">🏗️ Construction</a>
+</div>
+</div>
+
+<div id="process" class="section fade">
+<h2>My Process</h2>
+<div class="process">
+<div class="step">🎯 Research</div>
+<div class="step">⚙️ Setup</div>
+<div class="step">📈 Optimize</div>
+<div class="step">🚀 Scale</div>
+</div>
+</div>
+
+<button class="sticky-cta" onclick="openPopup()">🚀 Get Free Audit</button>
+<a href="https://wa.me/9589188668" class="whatsapp">💬</a>
+
+<div id="leadPopup" class="popup">
+<div class="popup-box">
+<span onclick="closePopup()">×</span>
+<h2>Get Free Strategy Call</h2>
+<input placeholder="Your Name">
+<input placeholder="Your Email">
+<input placeholder="Your Phone">
+<button onclick="openCalendly()">Book Call</button>
+</div>
+</div>
+
+<div style="max-width:1100px;margin:80px auto;padding:20px;">
+<h2 style="text-align:center;">Book a Free Consultation</h2>
+<iframe src="https://calendly.com/vinayyadav01992" width="100%" height="600"></iframe>
+</div>
+
+<div class="footer">
+<p>© 2026 Vinay Yadav</p>
+</div>
+
+<script>
+const popup=document.getElementById("leadPopup");
+
+function openPopup(){popup.style.display="flex";}
+function closePopup(){popup.style.display="none";}
+function openCalendly(){window.open("https://calendly.com/vinayyadav01992");}
+
+/* SCROLL ANIMATION */
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){e.target.classList.add('show');}
+});
+});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+
+/* AUTO POPUP */
+setTimeout(openPopup,8000);
+</script>
+
+</body>
+</html>
