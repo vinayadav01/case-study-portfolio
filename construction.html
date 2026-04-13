@@ -3,29 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Concrete Services Case Study</title>
+<title>Premium Case Study</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#f5f7fa;color:#333}
+body{background:#f4f7fb;color:#333}
 
 /* NAVBAR */
 .navbar{
-  background:#111;
+  background:#0f172a;
   padding:15px 30px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
 }
-.navbar a{
-  color:#fff;
-  margin:0 10px;
-  text-decoration:none;
-  font-size:14px;
-}
-.navbar a:hover{color:#00aaff}
+.navbar a{color:#fff;margin:0 10px;text-decoration:none;font-size:14px;}
+.navbar a:hover{color:#38bdf8}
 
 /* HERO */
 .hero{
@@ -34,39 +28,62 @@ body{background:#f5f7fa;color:#333}
   background-size:cover;
   color:#fff;
   text-align:center;
-  padding:80px 20px;
+  padding:90px 20px;
 }
 .hero h1{font-size:38px}
 
-/* RESULTS TOP */
-.results{
+/* KPI SECTION */
+.kpi-section{
   display:flex;
   justify-content:center;
+  gap:40px;
   flex-wrap:wrap;
-  gap:30px;
-  margin-top:-60px;
-  padding:20px;
+  margin-top:-70px;
 }
 
-/* CIRCLE KPI */
-.circle{
-  width:150px;
-  height:150px;
-  background:#fff;
-  border-radius:50%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+/* PROGRESS CIRCLE */
+.progress{
+  width:160px;
+  height:160px;
+  position:relative;
 }
-.circle h2{
-  color:#0077ff;
-  font-size:26px;
+
+.progress svg{
+  transform:rotate(-90deg);
 }
-.circle p{
-  font-size:13px;
+
+.progress circle{
+  fill:none;
+  stroke-width:10;
+  stroke-linecap:round;
+}
+
+.progress .bg{
+  stroke:#e5e7eb;
+}
+
+.progress .meter{
+  stroke:url(#grad);
+  stroke-dasharray:440;
+  stroke-dashoffset:440;
+  transition:1.5s ease;
+}
+
+.progress .number{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
   text-align:center;
+}
+
+.progress .number h2{
+  font-size:24px;
+  color:#0ea5e9;
+}
+
+.progress .number p{
+  font-size:12px;
 }
 
 /* SECTION */
@@ -75,43 +92,49 @@ body{background:#f5f7fa;color:#333}
   margin:auto;
   padding:60px 20px;
 }
-.section h2{margin-bottom:20px}
 
-/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
 
-/* CARD */
 .card{
   background:#fff;
   padding:20px;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:.3s;
 }
+.card:hover{transform:translateY(-6px);}
 
 /* CTA */
 .cta{
-  background:#0077ff;
-  color:#fff;
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  color:#000;
   text-align:center;
-  padding:50px 20px;
-  border-radius:10px;
+  padding:60px 20px;
 }
 .cta button{
   margin-top:15px;
   padding:12px 25px;
   border:none;
-  background:#fff;
-  color:#0077ff;
+  background:#000;
+  color:#fff;
   border-radius:25px;
   cursor:pointer;
 }
 
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:20px;
+  background:#0f172a;
+  color:#fff;
+}
+
 /* ANIMATION */
-.fade{opacity:0;transform:translateY(30px);transition:0.7s;}
+.fade{opacity:0;transform:translateY(30px);transition:0.8s;}
 .fade.show{opacity:1;transform:translateY(0);}
 </style>
 </head>
@@ -120,188 +143,135 @@ body{background:#f5f7fa;color:#333}
 
 <!-- NAVBAR -->
 <div class="navbar">
-  <div style="color:#fff;font-weight:600;">Case Studies</div>
+  <div style="color:#fff;font-weight:600;">AIM Tech Marketing</div>
   <div>
-   <b>AIM Tech Marketing</b>
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="healthcare.html">Healthcare</a>
-<a href="lawyer.html">Lawyer</a>
-<a href="packers-movers.html">Packers</a>
-<a href="pestcontrol.html">Pest Control</a>
-<a href="badges.html">Military Badges</a>
-<a href="wool-e-commerce.html">Yarn Store</a> 
-<a href="skincare.html">Skincare</a>
-<a href="pump-manufacturer.html">Pump Manufacturer</a>
-<a href="construction.html">Construction Industry</a>
+    <a href="index.html">Home</a>
+    <a href="pump-manufacturer.html">Pump</a>
+    <a href="construction.html">Construction</a>
   </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Pre-Cast & Concrete Remedial Services</h1>
-  <p>Lead Generation Case Study – Melbourne</p>
+  <h1>Concrete Remedial Case Study</h1>
+  <p>Melbourne Lead Generation</p>
 </div>
 
-<!-- RESULTS (TOP) -->
-<div class="results">
+<!-- KPI -->
+<div class="kpi-section">
 
-  <div class="circle">
-    <h2 class="counter" data-target="110">0</h2>
-    <p>Monthly Leads</p>
+  <!-- SVG Gradient -->
+  <svg width="0" height="0">
+    <defs>
+      <linearGradient id="grad">
+        <stop offset="0%" stop-color="#38bdf8"/>
+        <stop offset="100%" stop-color="#0ea5e9"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- KPI 1 -->
+  <div class="progress" data-value="85">
+    <svg width="160" height="160">
+      <circle cx="80" cy="80" r="70" class="bg"/>
+      <circle cx="80" cy="80" r="70" class="meter"/>
+    </svg>
+    <div class="number">
+      <h2>110</h2>
+      <p>Leads</p>
+    </div>
   </div>
 
-  <div class="circle">
-    <h2 class="counter" data-target="72">0</h2>
-    <p>CPL (AUD)</p>
+  <!-- KPI 2 -->
+  <div class="progress" data-value="72">
+    <svg width="160" height="160">
+      <circle cx="80" cy="80" r="70" class="bg"/>
+      <circle cx="80" cy="80" r="70" class="meter"/>
+    </svg>
+    <div class="number">
+      <h2>$72</h2>
+      <p>CPL</p>
+    </div>
   </div>
 
-  <div class="circle">
-    <h2 class="counter" data-target="7">0</h2>
-    <p>Conversion Rate %</p>
+  <!-- KPI 3 -->
+  <div class="progress" data-value="70">
+    <svg width="160" height="160">
+      <circle cx="80" cy="80" r="70" class="bg"/>
+      <circle cx="80" cy="80" r="70" class="meter"/>
+    </svg>
+    <div class="number">
+      <h2>7%</h2>
+      <p>Conv Rate</p>
+    </div>
   </div>
 
-  <div class="circle">
-    <h2 class="counter" data-target="8000">0</h2>
-    <p>Ad Spend (AUD)</p>
+  <!-- KPI 4 -->
+  <div class="progress" data-value="90">
+    <svg width="160" height="160">
+      <circle cx="80" cy="80" r="70" class="bg"/>
+      <circle cx="80" cy="80" r="70" class="meter"/>
+    </svg>
+    <div class="number">
+      <h2>$8000</h2>
+      <p>Ad Spend</p>
+    </div>
   </div>
 
 </div>
 
 <!-- OVERVIEW -->
 <div class="section fade">
-  <h2>📌 Overview</h2>
-  <p>
-    A Melbourne-based concrete remedial specialist wanted consistent, high-quality
-    B2B leads. We built a high-intent Google Ads funnel targeting builders,
-    contractors, and developers.
-  </p>
+<h2>Overview</h2>
+<p>Generated consistent high-quality B2B leads for a concrete remedial company using Google Ads.</p>
 </div>
 
 <!-- STRATEGY -->
 <div class="section fade">
-  <h2>🚀 Strategy</h2>
-  <div class="grid">
-    <div class="card">High-intent keyword targeting</div>
-    <div class="card">Landing page optimization</div>
-    <div class="card">Call & form tracking via GTM</div>
-    <div class="card">Remarketing campaigns</div>
-  </div>
+<h2>Strategy</h2>
+<div class="grid">
+<div class="card">High intent keywords</div>
+<div class="card">Landing page optimization</div>
+<div class="card">Conversion tracking</div>
+<div class="card">Remarketing</div>
+</div>
 </div>
 
-<!-- CHALLENGES -->
-<div class="section fade">
-  <h2>⚠️ Challenges</h2>
-  <ul>
-    <div class="card">High CPC in construction niche</div>
-   <div class="card">Low search volume</div>
-   <div class="card">Irrelevant residential leads</div>
-  </ul>
-</div>
-
-<!-- INSIGHTS -->
-<div class="section fade">
-  <h2>💡 Insights</h2>
-  <ul>
-    <div class="card">Long-tail keywords delivered best CPL</div>
-    <div class="card">Call extensions boosted conversions</div>
-   <div class="card">Remarketing improved lead quality</div>
-  </ul>
-</div>
-
+<!-- CTA -->
 <div class="cta">
-<h2>Want More Patient Leads?</h2>
-<p>I help healthcare brands scale using Google Ads.</p>
-<button onclick="window.open('https://wa.me/9589188668')">💬 Book Free Consultation</button>
+<h2>Want Similar Results?</h2>
+<button onclick="window.open('https://wa.me/9589188668')">Book Call</button>
 </div>
 
-</div>
-
-<button class="sticky-cta" onclick="openPopup()">🚀 Get Free Leads Plan</button>
-<a href="#" class="whatsapp">💬</a>
-
-<div id="leadPopup" class="popup">
-<div class="popup-box">
-<span onclick="closePopup()">×</span>
-<h2>Get Free Strategy Call</h2>
-<input placeholder="Your Name">
-<input placeholder="Your Email">
-<input placeholder="Your Phone">
-<button onclick="openCalendly()">Book Call</button>
-</div>
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Vinay Yadav
 </div>
 
 <script>
+// PROGRESS ANIMATION
+document.querySelectorAll('.progress').forEach(el=>{
+let value=el.getAttribute('data-value');
+let circle=el.querySelector('.meter');
+let radius=70;
+let circumference=2*Math.PI*radius;
 
-function openPopup(){document.getElementById("leadPopup").style.display="flex";}
-function closePopup(){document.getElementById("leadPopup").style.display="none";}
-function openCalendly(){window.open("https://calendly.com/your-link");}
+circle.style.strokeDasharray=circumference;
 
-/* Scroll Animation */
+let offset=circumference-(value/100)*circumference;
+
+setTimeout(()=>{
+circle.style.strokeDashoffset=offset;
+},300);
+});
+
+// SCROLL ANIMATION
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(e=>{
 if(e.isIntersecting){e.target.classList.add('show');}
 });
 });
-document.querySelectorAll('.card,.section').forEach(el=>{
-el.classList.add('fade-up');
-observer.observe(el);
-});
-
-/* Counter Animation */
-document.querySelectorAll("[data-target]").forEach(el=>{
-let target=+el.dataset.target;
-let count=0;
-let step=target/60;
-
-function update(){
-count+=step;
-if(count<target){
-el.innerText=Math.floor(count);
-requestAnimationFrame(update);
-}else{
-el.innerText=target;
-}
-}
-update();
-});
-
-<!-- FOOTER -->
-<div class="footer">
-  <p>© 2026 Vinay Yadav | Performance Marketing Consultant</p>
-</div>
-
-<!-- JS -->
-<script>
-function openPopup() {
-  document.getElementById("leadPopup").style.display = "flex";
-}
-
-function closePopup() {
-  document.getElementById("leadPopup").style.display = "none";
-}
-
-function openCalendly() {
-  window.open("https://calendly.com/vinayyadav01992", "_blank");
-}
-
-/* AUTO POPUP */
-setTimeout(() => {
-  openPopup();
-}, 5000);
-
-<div style="text-align:center; margin-top:50px;">
-  <a href="index.html" style="
-    padding:12px 25px;
-    background:linear-gradient(135deg,#38bdf8,#0ea5e9);
-    border-radius:8px;
-    text-decoration:none;
-    color:#000;
-    font-weight:bold;">
-    ← Back to Case Studies
-  </a>
-</div>
-
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
 </script>
 
 </body>
