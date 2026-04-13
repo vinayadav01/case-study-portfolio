@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIM Tech Marketing | Case Studies</title>
+<title>AIM Tech Marketing | Generate Leads</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -21,32 +21,31 @@ body{background:#eef2f7;color:#333}
   justify-content:space-between;
   z-index:999;
 }
-.navbar a{color:#fff;margin:0 10px;text-decoration:none;font-size:14px;}
+.navbar a{color:#fff;margin:0 10px;text-decoration:none;}
 .navbar a:hover{color:#38bdf8}
 
 /* HERO */
 .hero{
   background:linear-gradient(135deg,#0ea5e9,#38bdf8);
-  color:#000;
   text-align:center;
   padding:120px 20px;
 }
 .hero h1{font-size:42px;margin-bottom:10px;}
-.hero p{font-size:18px;margin-bottom:20px;}
+.hero p{margin-bottom:20px;}
 .hero button{
-  padding:12px 25px;
+  padding:14px 30px;
   background:#000;
   color:#fff;
   border:none;
-  border-radius:25px;
+  border-radius:30px;
   cursor:pointer;
 }
 
-/* STATS STRIP */
+/* STATS */
 .stats{
   display:flex;
   justify-content:center;
-  gap:40px;
+  gap:30px;
   padding:40px;
   flex-wrap:wrap;
 }
@@ -55,7 +54,6 @@ body{background:#eef2f7;color:#333}
   padding:20px 30px;
   border-radius:12px;
   text-align:center;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
 .stat h2{color:#0ea5e9}
 
@@ -76,17 +74,14 @@ body{background:#eef2f7;color:#333}
 /* CARD */
 .card{
   background:#fff;
-  border-radius:14px;
   padding:25px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:.3s;
+  border-radius:14px;
   text-decoration:none;
   color:#333;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:.3s;
 }
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 15px 30px rgba(0,0,0,0.12);
-}
+.card:hover{transform:translateY(-8px);}
 
 /* PROCESS */
 .process{
@@ -124,18 +119,32 @@ body{background:#eef2f7;color:#333}
   color:#fff;
   border:none;
   border-radius:30px;
-  cursor:pointer;
 }
 
-/* FOOTER */
-.footer{
-  background:#0f172a;
-  color:#fff;
+/* POPUP */
+.popup{
+  display:none;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+}
+.popup-box{
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+  width:320px;
   text-align:center;
-  padding:20px;
+}
+.popup-box input{
+  width:100%;
+  margin:10px 0;
+  padding:10px;
 }
 
-/* STICKY CTA */
+/* STICKY */
 .sticky-btn{
   position:fixed;
   bottom:20px;
@@ -145,6 +154,24 @@ body{background:#eef2f7;color:#333}
   padding:12px 20px;
   border-radius:30px;
   cursor:pointer;
+}
+.whatsapp{
+  position:fixed;
+  bottom:80px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:12px;
+  border-radius:50%;
+  text-decoration:none;
+}
+
+/* FOOTER */
+.footer{
+  background:#0f172a;
+  color:#fff;
+  text-align:center;
+  padding:20px;
 }
 </style>
 </head>
@@ -164,73 +191,93 @@ body{background:#eef2f7;color:#333}
 <!-- HERO -->
 <div class="hero">
   <h1>I Generate High-Quality Leads Using Google Ads</h1>
-  <p>Across Healthcare, Legal, Construction, E-commerce & More</p>
-  <button onclick="window.open('https://wa.me/9589188668')">🚀 Get Free Strategy</button>
+  <p>Get consistent leads for your business in 30 days</p>
+  <button onclick="openPopup()">🚀 Get Free Strategy</button>
 </div>
 
 <!-- STATS -->
 <div class="stats">
   <div class="stat"><h2>5000+</h2><p>Leads Generated</p></div>
-  <div class="stat"><h2>18+</h2><p>Industries Served</p></div>
-  <div class="stat"><h2>8x</h2><p>Avg ROAS</p></div>
+  <div class="stat"><h2>9+</h2><p>Industries</p></div>
+  <div class="stat"><h2>6x</h2><p>ROAS</p></div>
 </div>
 
 <!-- CASE STUDIES -->
 <div id="case" class="section">
-<h2 style="margin-bottom:30px;">📊 Case Studies</h2>
-
+<h2>Case Studies</h2>
 <div class="grid">
-
-<a href="healthcare.html" class="card">🏥 Healthcare Leads</a>
-<a href="lawyer.html" class="card">⚖️ Law Firm</a>
+<a href="healthcare.html" class="card">🏥 Healthcare</a>
+<a href="lawyer.html" class="card">⚖️ Lawyer</a>
 <a href="packers-movers.html" class="card">🚚 Packers</a>
 <a href="pestcontrol.html" class="card">🐜 Pest Control</a>
-<a href="badges.html" class="card">🎖️ Badges Store</a>
-<a href="wool-e-commerce.html" class="card">🧶 Yarn Store</a>
+<a href="badges.html" class="card">🎖️ Badges</a>
+<a href="wool-e-commerce.html" class="card">🧶 Yarn</a>
 <a href="skincare.html" class="card">🧴 Skincare</a>
-<a href="pump-manufacturer.html" class="card">⚙️ Pump Industry</a>
+<a href="pump-manufacturer.html" class="card">⚙️ Pump</a>
 <a href="construction.html" class="card">🏗️ Construction</a>
-
 </div>
 </div>
 
 <!-- PROCESS -->
 <div id="process" class="section">
-<h2 style="margin-bottom:30px;">⚙️ My Process</h2>
-
+<h2>My Process</h2>
 <div class="process">
-<div class="step">🎯 Research & Strategy</div>
-<div class="step">📊 Campaign Setup</div>
-<div class="step">🚀 Optimization</div>
-<div class="step">📈 Scaling</div>
+<div class="step">🎯 Research</div>
+<div class="step">⚙️ Setup</div>
+<div class="step">📈 Optimize</div>
+<div class="step">🚀 Scale</div>
 </div>
 </div>
 
 <!-- TESTIMONIAL -->
 <div class="section">
-<h2 style="text-align:center;margin-bottom:30px;">💬 Client Feedback</h2>
-
 <div class="testimonial">
-<p>"We saw consistent leads within the first month. Highly recommended for Google Ads."</p>
-<b>- Client</b>
+<p>"We started getting consistent leads within 2 weeks. Highly recommended!"</p>
+<b>- Business Owner</b>
 </div>
 </div>
 
 <!-- CTA -->
 <div id="contact" class="cta">
-<h2>Ready to Scale Your Leads?</h2>
-<p>Let’s build a system that generates consistent inquiries.</p>
-<button onclick="window.open('https://wa.me/9589188668')">Book Free Call</button>
+<h2>Ready to Get More Leads?</h2>
+<button onclick="openPopup()">Book Free Call</button>
 </div>
+
+<!-- POPUP -->
+<div id="leadPopup" class="popup">
+<div class="popup-box">
+<span onclick="closePopup()" style="cursor:pointer;">✖</span>
+<h3>Get Free Strategy Call</h3>
+<input placeholder="Your Name">
+<input placeholder="Your Email">
+<input placeholder="Your Phone">
+<button onclick="openCalendly()">Book Call</button>
+</div>
+</div>
+
+<!-- STICKY -->
+<div class="sticky-btn" onclick="openPopup()">Get Free Plan</div>
+<a href="https://wa.me/9589188668" class="whatsapp">💬</a>
 
 <!-- FOOTER -->
 <div class="footer">
-© 2026 Vinay Yadav | Performance Marketing Consultant
+© 2026 Vinay Yadav
 </div>
 
-<div class="sticky-btn" onclick="window.open('https://wa.me/9589188668')">
-💬 Chat Now
-</div>
+<script>
+function openPopup(){
+document.getElementById("leadPopup").style.display="flex";
+}
+function closePopup(){
+document.getElementById("leadPopup").style.display="none";
+}
+function openCalendly(){
+window.open("https://calendly.com/vinayyadav01992","_blank");
+}
+
+/* AUTO POPUP */
+setTimeout(openPopup,5000);
+</script>
 
 </body>
 </html>
