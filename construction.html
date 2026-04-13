@@ -12,12 +12,7 @@
 body{background:#f4f7fb;color:#333}
 
 /* NAVBAR */
-.navbar{
-  background:#0f172a;
-  padding:15px 30px;
-  display:flex;
-  justify-content:space-between;
-}
+.navbar{background:#0f172a;padding:15px 30px;display:flex;justify-content:space-between;}
 .navbar a{color:#fff;margin:0 10px;text-decoration:none;font-size:14px;}
 .navbar a:hover{color:#38bdf8}
 
@@ -25,113 +20,51 @@ body{background:#f4f7fb;color:#333}
 .hero{
   background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
   url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
-  background-size:cover;
-  color:#fff;
-  text-align:center;
-  padding:90px 20px;
+  background-size:cover;color:#fff;text-align:center;padding:90px 20px;
 }
 .hero h1{font-size:38px}
 
-/* KPI SECTION */
-.kpi-section{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-  margin-top:-70px;
-}
+/* KPI */
+.kpi-section{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:-70px;}
 
-/* PROGRESS CIRCLE */
-.progress{
-  width:160px;
-  height:160px;
-  position:relative;
-}
+.progress{width:160px;height:160px;position:relative;}
+.progress svg{transform:rotate(-90deg);}
+.progress circle{fill:none;stroke-width:10;stroke-linecap:round;}
+.bg{stroke:#e5e7eb;}
+.meter{stroke:url(#grad);stroke-dasharray:440;stroke-dashoffset:440;transition:1.5s;}
 
-.progress svg{
-  transform:rotate(-90deg);
-}
-
-.progress circle{
-  fill:none;
-  stroke-width:10;
-  stroke-linecap:round;
-}
-
-.progress .bg{
-  stroke:#e5e7eb;
-}
-
-.progress .meter{
-  stroke:url(#grad);
-  stroke-dasharray:440;
-  stroke-dashoffset:440;
-  transition:1.5s ease;
-}
-
-.progress .number{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  text-align:center;
-}
-
-.progress .number h2{
-  font-size:24px;
-  color:#0ea5e9;
-}
-
-.progress .number p{
-  font-size:12px;
-}
+.number{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
+.number h2{color:#0ea5e9}
 
 /* SECTION */
-.section{
-  max-width:1100px;
-  margin:auto;
-  padding:60px 20px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
+.section{max-width:1100px;margin:auto;padding:60px 20px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
 
 .card{
-  background:#fff;
-  padding:20px;
-  border-radius:12px;
+  background:#fff;padding:20px;border-radius:12px;
   box-shadow:0 8px 20px rgba(0,0,0,0.08);
   transition:.3s;
 }
 .card:hover{transform:translateY(-6px);}
 
+/* OUTCOME CARDS */
+.highlight{
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  color:#000;font-weight:600;text-align:center;
+}
+
 /* CTA */
 .cta{
   background:linear-gradient(135deg,#38bdf8,#0ea5e9);
-  color:#000;
-  text-align:center;
-  padding:60px 20px;
+  text-align:center;padding:60px 20px;
 }
 .cta button{
-  margin-top:15px;
-  padding:12px 25px;
-  border:none;
-  background:#000;
-  color:#fff;
-  border-radius:25px;
-  cursor:pointer;
+  margin-top:15px;padding:12px 25px;border:none;
+  background:#000;color:#fff;border-radius:25px;cursor:pointer;
 }
 
 /* FOOTER */
-.footer{
-  text-align:center;
-  padding:20px;
-  background:#0f172a;
-  color:#fff;
-}
+.footer{text-align:center;padding:20px;background:#0f172a;color:#fff;}
 
 /* ANIMATION */
 .fade{opacity:0;transform:translateY(30px);transition:0.8s;}
@@ -159,81 +92,95 @@ body{background:#f4f7fb;color:#333}
 
 <!-- KPI -->
 <div class="kpi-section">
+<svg width="0" height="0">
+<defs>
+<linearGradient id="grad">
+<stop offset="0%" stop-color="#38bdf8"/>
+<stop offset="100%" stop-color="#0ea5e9"/>
+</linearGradient>
+</defs>
+</svg>
 
-  <!-- SVG Gradient -->
-  <svg width="0" height="0">
-    <defs>
-      <linearGradient id="grad">
-        <stop offset="0%" stop-color="#38bdf8"/>
-        <stop offset="100%" stop-color="#0ea5e9"/>
-      </linearGradient>
-    </defs>
-  </svg>
+<div class="progress" data-value="85">
+<svg width="160" height="160">
+<circle cx="80" cy="80" r="70" class="bg"/>
+<circle cx="80" cy="80" r="70" class="meter"/>
+</svg>
+<div class="number"><h2>110</h2><p>Leads</p></div>
+</div>
 
-  <!-- KPI 1 -->
-  <div class="progress" data-value="85">
-    <svg width="160" height="160">
-      <circle cx="80" cy="80" r="70" class="bg"/>
-      <circle cx="80" cy="80" r="70" class="meter"/>
-    </svg>
-    <div class="number">
-      <h2>110</h2>
-      <p>Leads</p>
-    </div>
-  </div>
+<div class="progress" data-value="72">
+<svg width="160" height="160">
+<circle cx="80" cy="80" r="70" class="bg"/>
+<circle cx="80" cy="80" r="70" class="meter"/>
+</svg>
+<div class="number"><h2>$72</h2><p>CPL</p></div>
+</div>
 
-  <!-- KPI 2 -->
-  <div class="progress" data-value="72">
-    <svg width="160" height="160">
-      <circle cx="80" cy="80" r="70" class="bg"/>
-      <circle cx="80" cy="80" r="70" class="meter"/>
-    </svg>
-    <div class="number">
-      <h2>$72</h2>
-      <p>CPL</p>
-    </div>
-  </div>
+<div class="progress" data-value="70">
+<svg width="160" height="160">
+<circle cx="80" cy="80" r="70" class="bg"/>
+<circle cx="80" cy="80" r="70" class="meter"/>
+</svg>
+<div class="number"><h2>7%</h2><p>Conv Rate</p></div>
+</div>
 
-  <!-- KPI 3 -->
-  <div class="progress" data-value="70">
-    <svg width="160" height="160">
-      <circle cx="80" cy="80" r="70" class="bg"/>
-      <circle cx="80" cy="80" r="70" class="meter"/>
-    </svg>
-    <div class="number">
-      <h2>7%</h2>
-      <p>Conv Rate</p>
-    </div>
-  </div>
-
-  <!-- KPI 4 -->
-  <div class="progress" data-value="90">
-    <svg width="160" height="160">
-      <circle cx="80" cy="80" r="70" class="bg"/>
-      <circle cx="80" cy="80" r="70" class="meter"/>
-    </svg>
-    <div class="number">
-      <h2>$8000</h2>
-      <p>Ad Spend</p>
-    </div>
-  </div>
-
+<div class="progress" data-value="90">
+<svg width="160" height="160">
+<circle cx="80" cy="80" r="70" class="bg"/>
+<circle cx="80" cy="80" r="70" class="meter"/>
+</svg>
+<div class="number"><h2>$8000</h2><p>Ad Spend</p></div>
+</div>
 </div>
 
 <!-- OVERVIEW -->
 <div class="section fade">
 <h2>Overview</h2>
-<p>Generated consistent high-quality B2B leads for a concrete remedial company using Google Ads.</p>
+<p>Generated high-quality B2B leads for a concrete remedial company targeting builders, contractors & developers in Melbourne.</p>
 </div>
 
-<!-- STRATEGY -->
+<!-- CHALLENGES -->
 <div class="section fade">
-<h2>Strategy</h2>
+<h2>Challenges</h2>
 <div class="grid">
-<div class="card">High intent keywords</div>
+<div class="card">High CPC in construction niche</div>
+<div class="card">Low search volume</div>
+<div class="card">Unqualified residential leads</div>
+<div class="card">No structured funnel</div>
+</div>
+</div>
+
+<!-- SOLUTION -->
+<div class="section fade">
+<h2>Execution Strategy</h2>
+<div class="grid">
+<div class="card">High-intent keyword targeting</div>
 <div class="card">Landing page optimization</div>
-<div class="card">Conversion tracking</div>
-<div class="card">Remarketing</div>
+<div class="card">Call + form tracking setup</div>
+<div class="card">Remarketing campaigns</div>
+</div>
+</div>
+
+<!-- FINAL OUTCOMES -->
+<div class="section fade">
+<h2>Final Outcomes</h2>
+<div class="grid">
+<div class="card highlight">110 Qualified Leads / Month</div>
+<div class="card highlight">Reduced CPL to $72</div>
+<div class="card highlight">7% Conversion Rate</div>
+<div class="card highlight">Consistent Lead Flow</div>
+</div>
+</div>
+
+<!-- INSIGHTS -->
+<div class="section fade">
+<h2>Key Insights</h2>
+<div class="grid">
+<div class="card">Long-tail keywords gave best ROI</div>
+<div class="card">Call extensions boosted conversions</div>
+<div class="card">Remarketing improved quality</div>
+<div class="card">Landing page speed increased CVR</div>
 </div>
 </div>
 
@@ -249,27 +196,20 @@ body{background:#f4f7fb;color:#333}
 </div>
 
 <script>
-// PROGRESS ANIMATION
+// PROGRESS
 document.querySelectorAll('.progress').forEach(el=>{
 let value=el.getAttribute('data-value');
 let circle=el.querySelector('.meter');
-let radius=70;
-let circumference=2*Math.PI*radius;
-
-circle.style.strokeDasharray=circumference;
-
-let offset=circumference-(value/100)*circumference;
-
-setTimeout(()=>{
-circle.style.strokeDashoffset=offset;
-},300);
+let r=70;
+let c=2*Math.PI*r;
+circle.style.strokeDasharray=c;
+let offset=c-(value/100)*c;
+setTimeout(()=>{circle.style.strokeDashoffset=offset;},300);
 });
 
-// SCROLL ANIMATION
+// SCROLL
 const observer=new IntersectionObserver(entries=>{
-entries.forEach(e=>{
-if(e.isIntersecting){e.target.classList.add('show');}
-});
+entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');}});
 });
 document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
 </script>
