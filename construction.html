@@ -3,92 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Case Study</title>
+<title>Concrete Case Study</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#f4f7fb;color:#333}
+body{background:#eef2f7;color:#333}
 
 /* NAVBAR */
-.navbar{background:#0f172a;padding:15px 30px;display:flex;justify-content:space-between;}
-.navbar a{color:#fff;margin:0 10px;text-decoration:none;font-size:14px;}
+.navbar{
+  background:#0f172a;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.navbar a{color:#fff;margin:5px 10px;text-decoration:none;font-size:14px;}
 .navbar a:hover{color:#38bdf8}
 
 /* HERO */
 .hero{
-  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+  background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
   url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
-  background-size:cover;color:#fff;text-align:center;padding:90px 20px;
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  text-align:center;
+  padding:100px 20px 80px;
 }
-.hero h1{font-size:38px}
+.hero h1{font-size:38px;margin-bottom:10px;}
 
 /* KPI */
-.kpi-section{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:-70px;}
+.kpi-section{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  padding:40px 20px;
+}
 
-.progress{width:160px;height:160px;position:relative;}
-.progress svg{transform:rotate(-90deg);}
+.progress{
+  width:160px;height:160px;
+  background:#fff;
+  border-radius:50%;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  position:relative;
+}
+
+.progress svg{position:absolute;top:0;left:0;transform:rotate(-90deg);}
 .progress circle{fill:none;stroke-width:10;stroke-linecap:round;}
 .bg{stroke:#e5e7eb;}
 .meter{stroke:url(#grad);stroke-dasharray:440;stroke-dashoffset:440;transition:1.5s;}
 
-.number{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
+.number{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+}
 .number h2{color:#0ea5e9}
 
 /* SECTION */
-.section{max-width:1100px;margin:auto;padding:60px 20px;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:50px 20px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
 
 .card{
-  background:#fff;padding:20px;border-radius:12px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
-  transition:.3s;
+  background:#f9fbff;
+  padding:20px;
+  border-radius:10px;
+  border:1px solid #e6edf5;
 }
-.card:hover{transform:translateY(-6px);}
 
-/* OUTCOME CARDS */
-.highlight{
-  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
-  color:#000;font-weight:600;text-align:center;
+/* DASHBOARD */
+.dashboard{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+.dashboard img{
+  width:100%;
+  border-radius:12px;
+}
+.dashboard-stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+.stat-card{
+  background:#f9fbff;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
 }
 
 /* CTA */
 .cta{
+  margin:60px auto;
+  max-width:1100px;
   background:linear-gradient(135deg,#38bdf8,#0ea5e9);
-  text-align:center;padding:60px 20px;
+  text-align:center;
+  padding:60px 20px;
 }
 .cta button{
-  margin-top:15px;padding:12px 25px;border:none;
-  background:#000;color:#fff;border-radius:25px;cursor:pointer;
+  padding:12px 25px;
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:25px;
 }
 
 /* FOOTER */
-.footer{text-align:center;padding:20px;background:#0f172a;color:#fff;}
+.footer{
+  text-align:center;
+  padding:20px;
+  background:#0f172a;
+  color:#fff;
+}
 
 /* ANIMATION */
 .fade{opacity:0;transform:translateY(30px);transition:0.8s;}
 .fade.show{opacity:1;transform:translateY(0);}
+
+@media(max-width:768px){
+.dashboard{grid-template-columns:1fr;}
+}
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVBAR (UNCHANGED) -->
 <div class="navbar">
-<div class="nav-container">
-<b>AIM Tech Marketing</b>
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="healthcare.html">Healthcare</a>
-<a href="lawyer.html">Lawyer</a>
-<a href="packers-movers.html">Packers</a>
-<a href="pestcontrol.html">Pest Control</a>
-<a href="badges.html">Military Badges</a>
-<a href="wool-e-commerce.html">Yarn Store</a> 
-<a href="skincare.html">Skincare</a>
-<a href="pump-manufacturer.html">Pump Manufacturer</a>
-<a href="construction.html">Construction Industry</a>
+  <div style="color:#fff;font-weight:600;">AIM Tech Marketing</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="pump-manufacturer.html">Pump</a>
+    <a href="construction.html">Construction</a>
   </div>
 </div>
 
@@ -100,6 +163,7 @@ body{background:#f4f7fb;color:#333}
 
 <!-- KPI -->
 <div class="kpi-section">
+
 <svg width="0" height="0">
 <defs>
 <linearGradient id="grad">
@@ -140,54 +204,54 @@ body{background:#f4f7fb;color:#333}
 </svg>
 <div class="number"><h2>$8000</h2><p>Ad Spend</p></div>
 </div>
+
 </div>
-<!-- OVERVIEW -->
+
+<!-- DASHBOARD -->
 <div class="section fade">
-<h2>Overview</h2>
-<p>Generated high-quality B2B leads for a concrete remedial company targeting builders, contractors & developers in Melbourne.</p>
+<h2>Google Ads Snapshot</h2>
+<div class="dashboard">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+<div class="dashboard-stats">
+<div class="stat-card"><h3>18,500</h3><p>Clicks</p></div>
+<div class="stat-card"><h3>245K</h3><p>Impressions</p></div>
+<div class="stat-card"><h3>7.5%</h3><p>CTR</p></div>
+<div class="stat-card"><h3>$3.9</h3><p>CPC</p></div>
+<div class="stat-card"><h3>110</h3><p>Conversions</p></div>
+</div>
+</div>
 </div>
 
 <!-- CHALLENGES -->
 <div class="section fade">
 <h2>Challenges</h2>
 <div class="grid">
-<div class="card">High CPC in construction niche</div>
-<div class="card">Low search volume</div>
-<div class="card">Unqualified residential leads</div>
-<div class="card">No structured funnel</div>
+<div class="card">High CPC</div>
+<div class="card">Low volume</div>
+<div class="card">Unqualified leads</div>
+<div class="card">No funnel</div>
 </div>
 </div>
 
-<!-- SOLUTION -->
+<!-- STRATEGY -->
 <div class="section fade">
-<h2>Execution Strategy</h2>
+<h2>Strategy</h2>
 <div class="grid">
-<div class="card">High-intent keyword targeting</div>
-<div class="card">Landing page optimization</div>
-<div class="card">Call + form tracking setup</div>
-<div class="card">Remarketing campaigns</div>
+<div class="card">Keyword targeting</div>
+<div class="card">Landing pages</div>
+<div class="card">Tracking setup</div>
+<div class="card">Remarketing</div>
 </div>
 </div>
 
-<!-- FINAL OUTCOMES -->
+<!-- OUTCOMES -->
 <div class="section fade">
-<h2>Final Outcomes</h2>
+<h2>Outcomes</h2>
 <div class="grid">
-<div class="card highlight">110 Qualified Leads / Month</div>
-<div class="card highlight">Reduced CPL to $72</div>
-<div class="card highlight">7% Conversion Rate</div>
-<div class="card highlight">Consistent Lead Flow</div>
-</div>
-</div>
-
-<!-- INSIGHTS -->
-<div class="section fade">
-<h2>Key Insights</h2>
-<div class="grid">
-<div class="card">Long-tail keywords gave best ROI</div>
-<div class="card">Call extensions boosted conversions</div>
-<div class="card">Remarketing improved quality</div>
-<div class="card">Landing page speed increased CVR</div>
+<div class="card">110 Leads/month</div>
+<div class="card">$72 CPL</div>
+<div class="card">7% CVR</div>
+<div class="card">Consistent growth</div>
 </div>
 </div>
 
