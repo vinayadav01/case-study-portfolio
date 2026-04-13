@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIM Tech Marketing | Case Studies</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#eef2f7;color:#333}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  background:#0f172a;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  z-index:999;
+}
+.navbar a{color:#fff;margin:0 10px;text-decoration:none;font-size:14px;}
+.navbar a:hover{color:#38bdf8}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#0ea5e9,#38bdf8);
+  color:#000;
+  text-align:center;
+  padding:120px 20px;
+}
+.hero h1{font-size:42px;margin-bottom:10px;}
+.hero p{font-size:18px;margin-bottom:20px;}
+.hero button{
+  padding:12px 25px;
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+/* STATS STRIP */
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:40px;
+  flex-wrap:wrap;
+}
+.stat{
+  background:#fff;
+  padding:20px 30px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+.stat h2{color:#0ea5e9}
+
+/* SECTION */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  border-radius:14px;
+  padding:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:.3s;
+  text-decoration:none;
+  color:#333;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* PROCESS */
+.process{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.step{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  text-align:center;
+  max-width:700px;
+  margin:auto;
+}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  text-align:center;
+  padding:80px 20px;
+}
+.cta button{
+  margin-top:20px;
+  padding:14px 30px;
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+  background:#0f172a;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+
+/* STICKY CTA */
+.sticky-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#0ea5e9;
+  color:#fff;
+  padding:12px 20px;
+  border-radius:30px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div style="color:#fff;font-weight:600;">AIM Tech Marketing</div>
+  <div>
+    <a href="#case">Case Studies</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>I Generate High-Quality Leads Using Google Ads</h1>
+  <p>Across Healthcare, Legal, Construction, E-commerce & More</p>
+  <button onclick="window.open('https://wa.me/9589188668')">🚀 Get Free Strategy</button>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><h2>5000+</h2><p>Leads Generated</p></div>
+  <div class="stat"><h2>9+</h2><p>Industries Served</p></div>
+  <div class="stat"><h2>6x</h2><p>Avg ROAS</p></div>
+</div>
+
+<!-- CASE STUDIES -->
+<div id="case" class="section">
+<h2 style="margin-bottom:30px;">📊 Case Studies</h2>
+
+<div class="grid">
+
+<a href="healthcare.html" class="card">🏥 Healthcare Leads</a>
+<a href="lawyer.html" class="card">⚖️ Law Firm</a>
+<a href="packers-movers.html" class="card">🚚 Packers</a>
+<a href="pestcontrol.html" class="card">🐜 Pest Control</a>
+<a href="badges.html" class="card">🎖️ Badges Store</a>
+<a href="wool-e-commerce.html" class="card">🧶 Yarn Store</a>
+<a href="skincare.html" class="card">🧴 Skincare</a>
+<a href="pump-manufacturer.html" class="card">⚙️ Pump Industry</a>
+<a href="construction.html" class="card">🏗️ Construction</a>
+
+</div>
+</div>
+
+<!-- PROCESS -->
+<div id="process" class="section">
+<h2 style="margin-bottom:30px;">⚙️ My Process</h2>
+
+<div class="process">
+<div class="step">🎯 Research & Strategy</div>
+<div class="step">📊 Campaign Setup</div>
+<div class="step">🚀 Optimization</div>
+<div class="step">📈 Scaling</div>
+</div>
+</div>
+
+<!-- TESTIMONIAL -->
+<div class="section">
+<h2 style="text-align:center;margin-bottom:30px;">💬 Client Feedback</h2>
+
+<div class="testimonial">
+<p>"We saw consistent leads within the first month. Highly recommended for Google Ads."</p>
+<b>- Client</b>
+</div>
+</div>
+
+<!-- CTA -->
+<div id="contact" class="cta">
+<h2>Ready to Scale Your Leads?</h2>
+<p>Let’s build a system that generates consistent inquiries.</p>
+<button onclick="window.open('https://wa.me/9589188668')">Book Free Call</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Vinay Yadav | Performance Marketing Consultant
+</div>
+
+<div class="sticky-btn" onclick="window.open('https://wa.me/9589188668')">
+💬 Chat Now
+</div>
+
+</body>
+</html>
