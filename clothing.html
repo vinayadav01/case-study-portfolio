@@ -3,264 +3,402 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E-commerce Google Ads Case Study | $1,000 Budget</title>
+<title>E-commerce Google Ads Case Study</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 body{
   font-family:'Poppins',sans-serif;
-  background:#0f172a;
+  background:linear-gradient(135deg,#020617,#0f172a,#111827);
   color:#fff;
+  overflow-x:hidden;
 }
-.container{
-  width:90%;
-  max-width:1250px;
+
+/* NAVBAR */
+.navbar{
+  width:100%;
+  background:rgba(15,23,42,.85);
+  backdrop-filter:blur(12px);
+  position:sticky;
+  top:0;
+  z-index:999;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-container{
+  max-width:1400px;
   margin:auto;
-  padding:40px 0;
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
 }
+.nav-container b{
+  font-size:22px;
+  background:linear-gradient(90deg,#60a5fa,#22c55e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.nav-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.nav-links a{
+  text-decoration:none;
+  color:#cbd5e1;
+  font-size:14px;
+  padding:8px 12px;
+  border-radius:10px;
+  transition:.3s;
+}
+.nav-links a:hover{
+  background:#1e293b;
+  color:#fff;
+  transform:translateY(-2px);
+}
+
+/* CONTAINER */
+.container{
+  width:92%;
+  max-width:1350px;
+  margin:auto;
+  padding:35px 0 60px;
+}
+
+/* HERO */
 .hero{
+  position:relative;
+  overflow:hidden;
   text-align:center;
-  padding:70px 20px;
-  border-radius:22px;
-  background:linear-gradient(135deg,#2563eb,#7c3aed);
-  margin-bottom:35px;
+  padding:90px 25px;
+  border-radius:26px;
+  background:linear-gradient(135deg,#2563eb,#7c3aed,#06b6d4);
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+  animation:fadeUp 1s ease;
 }
-.hero h1{
-  font-size:42px;
-  margin-bottom:12px;
+.hero:before,
+.hero:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,.12);
 }
-.hero p{
-  font-size:18px;
-  opacity:.95;
+.hero:before{
+  width:220px;
+  height:220px;
+  top:-60px;
+  left:-50px;
+}
+.hero:after{
+  width:280px;
+  height:280px;
+  bottom:-100px;
+  right:-70px;
 }
 .badge{
   display:inline-block;
-  background:#22c55e;
-  color:#000;
-  padding:7px 14px;
+  padding:8px 16px;
   border-radius:50px;
-  font-size:13px;
+  background:#fff;
+  color:#111827;
   font-weight:700;
-  margin-bottom:14px;
+  font-size:13px;
+  margin-bottom:16px;
 }
+.hero h1{
+  font-size:48px;
+  line-height:1.2;
+  margin-bottom:15px;
+}
+.hero p{
+  font-size:18px;
+  color:#e2e8f0;
+  max-width:760px;
+  margin:auto;
+}
+
+/* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+  margin-top:28px;
 }
-.stat-card,.box-card{
-  background:#1e293b;
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 12px 25px rgba(0,0,0,.22);
-  transition:.3s;
+.card{
+  background:rgba(30,41,59,.88);
+  border:1px solid rgba(255,255,255,.06);
+  padding:26px;
+  border-radius:22px;
+  box-shadow:0 15px 30px rgba(0,0,0,.22);
+  transition:.35s;
+  animation:fadeUp .9s ease;
 }
-.stat-card:hover,.box-card:hover{
-  transform:translateY(-8px);
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 22px 40px rgba(0,0,0,.32);
 }
-.stat-card h3{
+.card h3{
   font-size:15px;
   color:#94a3b8;
   margin-bottom:8px;
 }
-.stat-card p{
-  font-size:28px;
-  font-weight:700;
+.card .big{
+  font-size:30px;
+  font-weight:800;
   color:#22c55e;
 }
-.section{
-  margin-top:55px;
-}
-.section-title{
-  font-size:32px;
-  color:#60a5fa;
-  margin-bottom:20px;
-}
-.box-card h4{
-  font-size:18px;
-  margin-bottom:10px;
-  color:#fff;
-}
-.box-card p{
-  color:#cbd5e1;
+.card p{
   font-size:15px;
+  color:#cbd5e1;
   line-height:1.7;
 }
+
+.section{
+  margin-top:65px;
+}
+.section-title{
+  font-size:34px;
+  margin-bottom:8px;
+  background:linear-gradient(90deg,#60a5fa,#22c55e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.section-sub{
+  color:#94a3b8;
+  margin-bottom:18px;
+}
+
+/* FOOTER */
 .footer{
   text-align:center;
-  margin-top:60px;
+  margin-top:70px;
+  padding:25px;
   color:#94a3b8;
-  font-size:14px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero h1{font-size:34px;}
+  .nav-container{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .nav-links{
+    max-height:220px;
+    overflow:auto;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-container">
+    <b>AIM Tech Marketing</b>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="healthcare.html">Healthcare</a>
+      <a href="lawyer.html">Lawyer</a>
+      <a href="packers-movers.html">Packers & Movers</a>
+      <a href="pestcontrol.html">Pest Control</a>
+      <a href="Badges.html">Military Patches</a>
+      <a href="wool-e-commerce.html">Yarn Store</a>
+      <a href="skincare.html">Skincare</a>
+      <a href="pump-manufacturer.html">Pump Manufacturer</a>
+      <a href="construction.html">Construction Industry</a>
+    </div>
+  </div>
+</div>
+
 <div class="container">
 
+<!-- HERO -->
 <div class="hero">
   <div class="badge">Google Ads Success Story</div>
-  <h1>$1,000 Monthly Budget → 4.86x ROAS</h1>
-  <p>High-converting e-commerce campaigns built for growth and profitability.</p>
+  <h1>$1,000 Budget → $4,860 Revenue</h1>
+  <p>Advanced campaign structure, smart bidding, and daily optimization helped this e-commerce store scale profitably.</p>
 </div>
 
-<!-- Stats -->
+<!-- STATS -->
 <div class="grid">
-  <div class="stat-card">
-    <h3>Monthly Spend</h3>
-    <p>$1,000</p>
+  <div class="card">
+    <h3>Monthly Ad Spend</h3>
+    <div class="big">$1,000</div>
   </div>
-  <div class="stat-card">
-    <h3>Conversions</h3>
-    <p>48</p>
+
+  <div class="card">
+    <h3>Total Conversions</h3>
+    <div class="big">48</div>
   </div>
-  <div class="stat-card">
+
+  <div class="card">
     <h3>Conversion Value</h3>
-    <p>$4,860</p>
+    <div class="big">$4,860</div>
   </div>
-  <div class="stat-card">
+
+  <div class="card">
     <h3>ROAS</h3>
-    <p>4.86x</p>
+    <div class="big">4.86x</div>
   </div>
-  <div class="stat-card">
+
+  <div class="card">
     <h3>CPA</h3>
-    <p>$20.83</p>
+    <div class="big">$20.83</div>
   </div>
-  <div class="stat-card">
+
+  <div class="card">
     <h3>CTR</h3>
-    <p>5.9%</p>
+    <div class="big">5.9%</div>
   </div>
 </div>
 
-<!-- Objective -->
+<!-- OBJECTIVES -->
 <div class="section">
   <div class="section-title">Project Objective</div>
+  <div class="section-sub">What the client wanted to achieve</div>
+
   <div class="grid">
-    <div class="box-card">
-      <h4>Increase Sales</h4>
-      <p>Generate more purchases from paid traffic while maintaining profitable margins.</p>
+    <div class="card">
+      <h3>Increase Purchases</h3>
+      <p>Generate more monthly orders through Google Ads with strong buying intent traffic.</p>
     </div>
 
-    <div class="box-card">
-      <h4>Improve Revenue</h4>
-      <p>Raise total conversion value by focusing on higher average order value products.</p>
+    <div class="card">
+      <h3>Boost Revenue</h3>
+      <p>Increase conversion value by prioritizing profitable and high AOV products.</p>
     </div>
 
-    <div class="box-card">
-      <h4>Control Costs</h4>
-      <p>Keep spend limited to $1,000/month and reduce wasted clicks through optimization.</p>
+    <div class="card">
+      <h3>Maintain Profitability</h3>
+      <p>Scale results while staying within a fixed $1,000 monthly budget.</p>
     </div>
   </div>
 </div>
 
-<!-- Strategy -->
+<!-- STRATEGY -->
 <div class="section">
   <div class="section-title">Strategy Implemented</div>
+  <div class="section-sub">How growth was achieved</div>
+
   <div class="grid">
-
-    <div class="box-card">
-      <h4>Performance Max</h4>
-      <p>Used top-selling products in PMax to capture demand across all Google networks.</p>
+    <div class="card">
+      <h3>Performance Max</h3>
+      <p>Used best-selling products to reach buyers across Search, Shopping, YouTube & Display.</p>
     </div>
 
-    <div class="box-card">
-      <h4>Search Campaigns</h4>
-      <p>Targeted high-intent keywords with strong commercial buying signals.</p>
+    <div class="card">
+      <h3>Search Ads</h3>
+      <p>Focused on commercial keywords with strong conversion intent.</p>
     </div>
 
-    <div class="box-card">
-      <h4>Remarketing</h4>
-      <p>Re-engaged cart visitors and past website users with dynamic ads.</p>
+    <div class="card">
+      <h3>Remarketing</h3>
+      <p>Recovered abandoned carts and past visitors using dynamic product ads.</p>
     </div>
 
-    <div class="box-card">
-      <h4>Feed Optimization</h4>
-      <p>Improved product titles, descriptions, and images for stronger Shopping performance.</p>
+    <div class="card">
+      <h3>Feed Optimization</h3>
+      <p>Improved titles, descriptions, GTINs and product imagery.</p>
     </div>
 
-    <div class="box-card">
-      <h4>Negative Keywords</h4>
-      <p>Removed low-quality search terms daily to protect budget and boost relevance.</p>
+    <div class="card">
+      <h3>Negative Keywords</h3>
+      <p>Blocked irrelevant traffic and reduced wasted spend every week.</p>
     </div>
 
-    <div class="box-card">
-      <h4>Geo Optimization</h4>
-      <p>Allocated more budget to locations with stronger conversion performance.</p>
+    <div class="card">
+      <h3>Location Bidding</h3>
+      <p>Increased bids in top-converting states and cities.</p>
     </div>
-
   </div>
 </div>
 
-<!-- Results -->
+<!-- RESULTS -->
 <div class="section">
   <div class="section-title">Results in 30 Days</div>
+  <div class="section-sub">Performance delivered after optimization</div>
+
   <div class="grid">
-
-    <div class="box-card">
-      <h4>48 Purchases</h4>
-      <p>Consistent order flow generated through optimized paid campaigns.</p>
+    <div class="card">
+      <h3>48 Sales</h3>
+      <p>Consistent purchase flow generated from paid campaigns.</p>
     </div>
 
-    <div class="box-card">
-      <h4>$4,860 Revenue</h4>
-      <p>Strong tracked conversion value from a modest monthly ad budget.</p>
+    <div class="card">
+      <h3>$4,860 Revenue</h3>
+      <p>Strong conversion value tracked through Google Ads reporting.</p>
     </div>
 
-    <div class="box-card">
-      <h4>4.86x ROAS</h4>
-      <p>Every $1 spent returned $4.86 in attributed sales revenue.</p>
+    <div class="card">
+      <h3>4.86x ROAS</h3>
+      <p>Every $1 invested returned $4.86 in attributed revenue.</p>
     </div>
 
-    <div class="box-card">
-      <h4>$20.83 CPA</h4>
-      <p>Efficient acquisition cost achieved through tight audience targeting.</p>
+    <div class="card">
+      <h3>Lower CPA</h3>
+      <p>Acquired customers efficiently at just $20.83 per conversion.</p>
     </div>
 
-    <div class="box-card">
-      <h4>Higher Mobile CVR</h4>
-      <p>Landing page improvements increased smartphone purchase rate.</p>
+    <div class="card">
+      <h3>Mobile Growth</h3>
+      <p>Improved landing pages lifted smartphone conversion rates.</p>
     </div>
 
-    <div class="box-card">
-      <h4>Remarketing Wins</h4>
-      <p>Returning visitors converted at lower cost than cold traffic campaigns.</p>
+    <div class="card">
+      <h3>Returning Buyers</h3>
+      <p>Remarketing delivered cheaper conversions than cold audiences.</p>
     </div>
-
   </div>
 </div>
 
-<!-- Why Worked -->
+<!-- WHY IT WORKED -->
 <div class="section">
   <div class="section-title">Why It Worked</div>
+  <div class="section-sub">Key success factors</div>
+
   <div class="grid">
-
-    <div class="box-card">
-      <h4>Intent-Based Traffic</h4>
-      <p>Focused spend on people actively searching for products.</p>
+    <div class="card">
+      <h3>Intent Traffic</h3>
+      <p>Budget focused on users ready to buy now.</p>
     </div>
 
-    <div class="box-card">
-      <h4>Smart Budget Use</h4>
-      <p>Budget was shifted constantly toward winning products and audiences.</p>
+    <div class="card">
+      <h3>Smart Optimization</h3>
+      <p>Spend moved quickly toward products and audiences producing revenue.</p>
     </div>
 
-    <div class="box-card">
-      <h4>Continuous Optimization</h4>
-      <p>Daily improvements kept performance growing throughout the month.</p>
+    <div class="card">
+      <h3>Daily Management</h3>
+      <p>Continuous testing improved CTR, CVR, and ROAS over time.</p>
     </div>
-
   </div>
 </div>
 
 <div class="footer">
-  Designed for Portfolio • Upwork • Client Showcase
+  Designed for Portfolio • Upwork • Client Presentation
 </div>
 
 </div>
