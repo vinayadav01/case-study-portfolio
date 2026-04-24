@@ -55,7 +55,16 @@ body::after {
   padding: 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
+
+/* FIXED LOGO */
+.brand-logo{
+  height: 55px;
+  width: auto;
+  display: block;
+}
+
 .nav-links a {
   margin-left: 20px;
   text-decoration: none;
@@ -92,24 +101,19 @@ body::after {
 .card {
   width: 220px;
   height: 220px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-
   background: rgba(255,255,255,0.9);
   backdrop-filter: blur(10px);
-
   border-radius: 50%;
   border: 1px solid rgba(0,0,0,0.06);
-
   cursor: pointer;
   transition: 0.6s;
   position: relative;
   overflow: hidden;
-
   transform: translateY(80px);
   opacity: 0;
 }
@@ -251,8 +255,8 @@ iframe {
 <!-- NAVBAR -->
 <div class="navbar">
   <div class="nav-container">
- <img src="Brand logo.png" alt="Scale with Clicks Logo" class="brand-logo">
-    
+    <img src="./Brand%20logo.png" alt="Scale with Clicks Logo" class="brand-logo">
+
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="healthcare.html">Healthcare</a>
@@ -265,7 +269,7 @@ iframe {
       <a href="pump-manufacturer.html">Pump Manufacturer</a>
       <a href="construction.html">Construction Industry</a>
       <a href="casestudy.html">Case Studies</a>
-      <a href="clothing.html">Clothing</a>  
+      <a href="clothing.html">Clothing</a>
     </div>
   </div>
 </div>
@@ -343,6 +347,6 @@ function openCalendly(){window.open("https://calendly.com/vinayyadav01992","_bla
 
 setTimeout(openPopup,10000);
 </script>
-  
+
 </body>
 </html>
